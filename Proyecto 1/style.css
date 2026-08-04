@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
+
+:root{
+    --primary_color: 66, 70, 150;
+    --secondary_color: 197, 162, 181;
+    --terciary_color: 48, 57, 73;
+    --background_color: 250, 255, 246;
+    --logo_font:"Bowlby one sc";
+    --headers_font:"Special gothic expanded one";
+    --standard_font:"Nata sans";
+    --spacing: 30px;
+}
+
+* {
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(var(--background_color));
+    background-color: transparent;
+    font-family: "Nata sans",sans-serif;
+    font-weight: 300;
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1710162734135-8dc148f53abe?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9uZG8lMjBkZWwlMjBzaXRpbyUyMHdlYnxlbnwwfHwwfHx8MA%3D%3D);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(var(--terciary_color));
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(var(--secondary_color));
+}
+
+#SelectorTipoRopa {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,0.5fr));
+    background-color: rgba(var(--secondary_color), 0.3);
+}
+
+#SelectorTipoRopa > li {
+    padding: var(--spacing);
+    font-size: 18px;
+    font-family: "Nata sans", sans-serif;
+
+}
+
+#Titular{
+    padding: var(--spacing);
+    padding-bottom: 0px;
+    color: rgb(var(--primary_color));
+    font-size: 100px;
+    font-family:"Bowlby one sc", sans-serif;
+}
+
+#SubtítuloDelTitular{
+    padding: var(--spacing);
+    padding-top: 0px;
+    font-family: "nata sans", sans-serif;
+}
+
+#Encabezados{
+    color: rgb(var(--secondary_color));
+    padding: var(--spacing);
+    margin-left: var(--spacing);
+    font-size: 40px;
+    font-family: "Special gothic expanded one", sans-serif;
+ }
+
+#Catalogo{
+    padding: var(--spacing);
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(300px,1fr));
+    gap: var(--spacing);
+}
+
+#Catalogo > li {
+    border: 3px solid rgba(var(--secondary_color),0.6);
+    text-align: center;
+    background-color: rgba(var(--secondary_color), 0.4);
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+}
+#Catalogo > li figure{
+     height: 100%;
+    width: 100%;
+    padding: var(--spacing);
+}
+
+#Catalogo > li > figure > img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 6/7;
+    object-fit: cover;
+     border-radius: 10px;
+
+}
+#Catalogo > li > figcaption{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;;
+
+}
+
+#Catalogo >li > figcaption > h2{
+    align-self: flex-start;
+    padding: var(--spacing);
+    padding-top: 0px;
+    padding-right: 0px;
+    color: rgb(var(--primary_color));
+    font-family: var(--headers_font), sans-serif;
+    font-size: 100%;
+}
+
+#Catalogo >li > figcaption > p{
+    align-self: flex-end;
+     padding: var(--spacing);
+    padding-top: 0px;
+    padding-left: 0px;
+    font-size: 100%;
+    font-weight: 500;
+    }
+
+footer{
+    background-color: rgba(var(--primary_color), 0.7);
+    padding-bottom: var(--spacing);
+    display: flex;
+    justify-content: space-between;
+}
+
+#Extras > ul > li{
+    margin-left: var(--spacing);
+    padding-left: var(--spacing);
+}
+
+#Créditos{
+    color: rgb(var(--primary_color));
+    padding: var(--spacing);
+    align-self: flex-end;
+}
