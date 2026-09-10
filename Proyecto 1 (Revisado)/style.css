@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
+
+:root {
+    --primary_color: 66, 70, 150;
+    --secondary_color: 197, 162, 181;
+    --terciary_color: 48, 57, 73;
+    --background_color: 250, 255, 246;
+
+    --logo_font: "Bowlby One SC";
+    --headers_font: "Special Gothic Expanded One";
+    --standard_font: "Nata Sans";
+
+    --spacing: clamp(15px, 2vw, 30px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--standard_font), sans-serif;
+
+    background-image: url("https://images.unsplash.com/photo-1710162734135-8dc148f53abe?fm=jpg&q=60&w=3000");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(var(--terciary_color));
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(var(--secondary_color));
+}
+
+
+
+#SelectorTipoRopa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    background-color: rgba(var(--secondary_color), 0.3);
+}
+
+#SelectorTipoRopa li {
+    padding: 20px;
+    text-align: center;
+    font-size: clamp(14px, 1.5vw, 18px);
+    cursor: pointer;
+}
+
+
+#Titular {
+    padding: var(--spacing);
+    padding-bottom: 0;
+
+    font-family: var(--logo_font), sans-serif;
+    color: rgb(var(--primary_color));
+
+    font-size: clamp(50px, 10vw, 100px);
+    line-height: 1;
+}
+
+#SubtítuloDelTitular {
+    padding: var(--spacing);
+    padding-top: 0;
+
+    font-size: clamp(16px, 2vw, 24px);
+    color: rgb(var(--terciary_color));
+}
+
+#Encabezados {
+    padding: var(--spacing);
+
+    color: rgb(var(--secondary_color));
+    font-family: var(--headers_font), sans-serif;
+
+    font-size: clamp(28px, 5vw, 40px);
+}
+
+
+#Catalogo {
+    padding: var(--spacing);
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: var(--spacing);
+}
+
+#Catalogo > li {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    background-color: rgba(var(--secondary_color), 0.35);
+
+    border: 3px solid rgba(var(--secondary_color), 0.6);
+
+    backdrop-filter: blur(2px);
+}
+
+#Catalogo figure {
+    width: 100%;
+    padding: var(--spacing);
+}
+
+#Catalogo img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 6 / 7;
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+#Catalogo figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 var(--spacing) var(--spacing);
+}
+
+#Catalogo h2 {
+    color: rgb(var(--primary_color));
+
+    font-family: var(--headers_font), sans-serif;
+
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+#Catalogo p {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+footer {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding: var(--spacing);
+
+    background-color: rgba(var(--primary_color), 0.15);
+
+    backdrop-filter: blur(4px);
+}
+
+#Extras ul {
+    margin-top: 10px;
+}
+
+#Extras li {
+    margin-bottom: 10px;
+}
+
+#Créditos {
+    text-align: right;
+    align-self: flex-end;
+}
+
+
+@media (max-width: 900px) {
+
+    #Catalogo {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(240px, 1fr)
+        );
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #SelectorTipoRopa {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #Catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    #Catalogo figcaption {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
